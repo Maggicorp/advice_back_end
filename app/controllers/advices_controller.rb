@@ -7,12 +7,13 @@ class AdvicesController < ApplicationController
 
     render json: @advices
   end
-# GET random
+# GET /random
 def random
-  rand_num = 1 + rand(Advice.all.length)
+rand_num = 1 + rand(Advice.all.length - 1)
   if Advice.find(rand_num)
     @advice = Advice.find(rand_num)
-  else  rand_num = 1 + rand(Advice.all.length)
+  else
+    @advice = "Error with Number"
   end
   render json: @advice
 end
