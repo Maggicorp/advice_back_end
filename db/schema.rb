@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 20170430171219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "advices", force: :cascade do |t|
+    t.string   "advice_idea",   null: false
+    t.string   "advice_author"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "author_id"
+    t.index ["author_id"], name: "index_advices_on_author_id", using: :btree
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "user_name",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "examples", force: :cascade do |t|
     t.text     "text",       null: false
@@ -33,5 +48,6 @@ ActiveRecord::Schema.define(version: 2) do
     t.index ["token"], name: "index_users_on_token", unique: true, using: :btree
   end
 
+  add_foreign_key "advices", "authors"
   add_foreign_key "examples", "users"
 end
