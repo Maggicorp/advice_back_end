@@ -9,12 +9,10 @@ class AdvicesController < ApplicationController
   end
 # GET /random
 def random
-rand_num = 1 + rand(Advice.all.length - 1)
-  if Advice.find(rand_num)
-    @advice = Advice.find(rand_num)
-  else
-    @advice = "Error with Number"
-  end
+ids_array =Advice.ids
+rand_num = rand(ids_array.length)
+array_index = ids_array[rand_num]
+    @advice = Advice.find(array_index)
   render json: @advice
 end
 
