@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  resources :authors, only: [:index, :show]
+  resources :authors, only: [:index, :show, :create]
   resources :advices, only: [:index, :show, :destroy, :update, :create]
   resources :examples, except: [:new, :edit]
   post '/sign-up' => 'users#signup'
