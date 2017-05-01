@@ -1,4 +1,4 @@
-#works if you set id = [1-highest number]
+
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/advices"
