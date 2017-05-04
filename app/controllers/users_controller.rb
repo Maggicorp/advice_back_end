@@ -10,7 +10,7 @@ class UsersController < ProtectedController
     # head(:ok) if request.request_method == "OPTIONS"
     # or, render text: ''
     # if that's more your style
-  end
+  # end
   # POST '/sign-up'
   def signup
     user = User.create(user_creds)
