@@ -18,11 +18,13 @@ development_client_origin ||= ENV['CLIENT_ORIGIN']
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins do |origin, _env|
-      '*' == ENV['CLIENT_ORIGIN'] ||
-        origin == ENV['CLIENT_ORIGIN'] ||
-        origin == development_client_origin
-    end
+    origins '*'
+
+    # origins do |origin, _env|
+    #   '*' == ENV['CLIENT_ORIGIN'] ||
+    #     origin == ENV['CLIENT_ORIGIN'] ||
+    #     origin == development_client_origin
+    # end
     resource '*',
              headers: :any,
              methods: [:options, :head, :get, :delete, :patch, :put, :post]
