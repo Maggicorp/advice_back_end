@@ -1,12 +1,16 @@
 # frozen_string_literal: true
 class ExamplesController < OpenReadController
   before_action :set_example, only: [:update, :destroy]
-
+# eventually get rid of, but for now is good to use for reference
   # GET /examples
   # GET /examples.json
   def index
     @examples = Example.all
+    # @examples = current_user.examples
+    # or @examples = current_user.person.examples
+    #if it is a has one to belongs to it is not .build it is something else
 
+# need to be limited to current_user.examples
     render json: @examples
   end
 
@@ -18,6 +22,7 @@ class ExamplesController < OpenReadController
 
   # POST /examples
   # POST /examples.json
+  # super important, relationship is automatic, relationship belongs to recipe, one to many relationship.  current_user is an instance of the user class
   def create
     @example = current_user.examples.build(example_params)
 
