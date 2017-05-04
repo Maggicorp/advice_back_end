@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 class UsersController < ProtectedController
   skip_before_action :authenticate, only: [:signup, :signin]
-  before_filter :allow_cors_requests
+  # before_filter :allow_cors_requests
 
   def allow_cors_requests
     headers["Access-Control-Allow-Origin"] = "*"
