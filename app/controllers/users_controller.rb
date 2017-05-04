@@ -36,7 +36,7 @@ class UsersController < ProtectedController
   def signout
     if current_user == User.find(params[:id])
       current_user.logout
-      head :no_content
+      # head :no_content
     else
       head :unauthorized
     end
@@ -47,7 +47,7 @@ class UsersController < ProtectedController
     if !current_user.authenticate(pw_creds[:old]) ||
        (current_user.password = pw_creds[:new]).blank? ||
        !current_user.save
-      head :bad_request
+      # head :bad_request
     else
       head :no_content
     end
@@ -63,7 +63,7 @@ class UsersController < ProtectedController
   end
 
   def update
-    head :bad_request
+    # head :bad_request
   end
 
   private
