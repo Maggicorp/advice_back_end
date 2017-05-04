@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 class UsersController < ProtectedController
   skip_before_action :authenticate, only: [:signup, :signin]
-  before_filter :allow_cors_requests
-
-  def allow_cors_requests
-    headers["Access-Control-Allow-Origin"] = "*"
-    headers["Access-Control-Allow-Methods"] = %w{GET POST PUT DELETE OPTIONS}.join(",")
-    headers["Access-Control-Allow-Headers"] = %w{Origin Accept Content-Type X-Requested-With X-CSRF-Token}.join(",")
+  # before_filter :allow_cors_requests
+  #
+  # def allow_cors_requests
+  #   headers["Access-Control-Allow-Origin"] = "*"
+  #   headers["Access-Control-Allow-Methods"] = %w{GET POST PUT DELETE OPTIONS}.join(",")
+  #   headers["Access-Control-Allow-Headers"] = %w{Origin Accept Content-Type X-Requested-With X-CSRF-Token}.join(",")
     # head(:ok) if request.request_method == "OPTIONS"
     # or, render text: ''
     # if that's more your style
