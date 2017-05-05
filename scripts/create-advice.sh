@@ -6,10 +6,10 @@ curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
-    --header "Authorization: Token token=$TOKEN" \
+    --header "Authorization: Token token=9160e1769f9f1d5a0134865c7e29191b" \
   --data '{
     "advice": {
-      "advice_idea": "Help a bubby out",
+      "idea": "'"Help a bubby out"'"
     }
   }'
 
