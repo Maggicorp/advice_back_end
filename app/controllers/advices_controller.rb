@@ -4,8 +4,8 @@ class AdvicesController < ApplicationController
 
   # GET /advices
   def index
-    # @advices = current_user.advices
-    @advices = Advice.all
+    @advices = current_user.advices
+    # @advices = Advice.all
 
     render json: @advices
   end
