@@ -15,7 +15,7 @@ class AdvicesController < ApplicationController
 
   # POST /advices
   def create
-    @advice = Advice.new(advice_params)
+    @advice = current_user.advices.build(advice_params)
 
     if @advice.save
       render json: @advice, status: :created, location: @advice
