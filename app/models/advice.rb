@@ -1,4 +1,4 @@
 class Advice < ApplicationRecord
   belongs_to :user
-  validates :idea, presence: true
+  validates :idea, :user, presence: true
 end
