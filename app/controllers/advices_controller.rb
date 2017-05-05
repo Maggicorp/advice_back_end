@@ -18,9 +18,9 @@ class AdvicesController < ApplicationController
   # POST /advices
   def create
 
-
+    # binding.pry
     @advice = current_user.advices.build(advice_params)
-
+    # binding.pry
     if @advice.save
       render json: @advice, status: :created, location: @advice
     else

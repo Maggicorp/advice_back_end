@@ -1,5 +1,5 @@
 class AdviceSerializer < ActiveModel::Serializer
-  attributes :idea, :user
+  attributes :idea
 
 end
 
