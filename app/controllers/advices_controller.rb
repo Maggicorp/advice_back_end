@@ -1,8 +1,10 @@
 class AdvicesController < ApplicationController
   before_action :set_advice, only: [:show, :update, :destroy]
+  before_action :validate_user, only: [:index, :create, :update, :destory, :set_advice]
 
   # GET /advices
   def index
+    # @advices = current_user.advices
     @advices = Advice.all
 
     render json: @advices
@@ -42,6 +44,10 @@ class AdvicesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_advice
       @advice = Advice.find(params[:id])
+    end
+
+    def validate_user
+      set_current_user
     end
 
     # Only allow a trusted parameter "white list" through.
