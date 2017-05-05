@@ -1,6 +1,6 @@
-class AdvicesController < ApplicationController
+class AdvicesController < OpenReadController
   before_action :set_advice, only: [:show, :update, :destroy]
-  before_action :validate_user, only: [:index, :create, :update, :destory, :set_advice]
+  # before_action :validate_user, only: [:index, :create, :update, :destroy, :set_advice]
 
   # GET /advices
   def index
@@ -49,9 +49,9 @@ class AdvicesController < ApplicationController
       @advice = Advice.find(params[:id])
     end
 
-    def validate_user
-      set_current_user
-    end
+    # def validate_user
+    #   set_current_user
+    # end
 
     # Only allow a trusted parameter "white list" through.
     def advice_params
