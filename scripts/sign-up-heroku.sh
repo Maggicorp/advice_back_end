@@ -1,6 +1,6 @@
 #!/bin/bash
-
-API="${API_ORIGIN:-https://advice-app-maggicorp.herokuapp.com}"
+https://vast-coast-80096.herokuapp.com
+API="${API_ORIGIN:-https://vast-coast-80096.herokuapp.com}"
 URL_PATH="/sign-up"
 curl "${API}${URL_PATH}" \
   --include \
@@ -8,7 +8,7 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "'"NoraShoesYellow"'",
+      "email": "'"Toni"'",
       "password": "'"1"'",
       "password_confirmation": "'"1"'"
     }
