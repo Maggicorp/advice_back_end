@@ -1,6 +1,7 @@
 class AdviceSerializer < ActiveModel::Serializer
-  attributes :id, :idea, :user
+  attributes :idea, :user
   has_one :user
 end
 
-#deletes user idea from attributes
+# delete :id from advices serializer
+# deletes user idea from attributes

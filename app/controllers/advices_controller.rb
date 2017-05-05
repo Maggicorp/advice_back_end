@@ -17,6 +17,8 @@ class AdvicesController < ApplicationController
 
   # POST /advices
   def create
+
+
     @advice = current_user.advices.build(advice_params)
 
     if @advice.save

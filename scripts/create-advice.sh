@@ -1,6 +1,6 @@
 #does not work
 
-API="${API_ORIGIN:-http://localhost:4741}"
+API="${API_ORIGIN:-https://vast-coast-80096.herokuapp.com}"
 URL_PATH="/advices"
 curl "${API}${URL_PATH}" \
   --include \
@@ -9,7 +9,8 @@ curl "${API}${URL_PATH}" \
     --header "Authorization: Token token=9160e1769f9f1d5a0134865c7e29191b" \
   --data '{
     "advice": {
-      "idea": "'"Help a buddy out"'"
+      "idea": "'"Help a buddy out"'",
+      "user": "'"user_current"'"
     }
   }'
 
