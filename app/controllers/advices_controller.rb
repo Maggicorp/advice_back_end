@@ -21,11 +21,11 @@ class AdvicesController < ApplicationController
     # binding.pry
     @advice = current_user.advices.build(advice_params)
     # binding.pry
-    if @advice.save
-      render json: @advice, status: :created, location: @advice
-    else
-      render json: @advice.errors, status: :unprocessable_entity
-    end
+    @advice.save
+    #   render json: @advice, status: :created, location: @advice
+    # else
+    #   render json: @advice.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /advices/1
