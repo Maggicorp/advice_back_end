@@ -1,6 +1,6 @@
 # # frozen_string_literal: true
 
-# Author.create(author_list)
+#Author.create(author_list)
 #
 # seed1_advices = [{ advice_idea: 'Take a nap', author: Author.last }, { advice_idea: 'Drink more coffee', author: Author.last }, { advice_idea: 'Drink less coffee', author: Author.last }, { advice_idea: 'Call your mom', author: Author.last }, { advice_idea: 'Call your dad', author: Author.last }, { advice_idea: 'Eat some candy', author: Author.first }]
 #
