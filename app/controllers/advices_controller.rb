@@ -52,6 +52,8 @@ class AdvicesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def advice_params
-      params.require(:advice).permit(:idea, :user_id, :updated_at, :created_at)
+      params.require(:advice).permit(:idea)
     end
 end
+
+    # Deletes extra not required advice params params.require(:advice).permit(:idea, :user_id, :updated_at, :created_at)
