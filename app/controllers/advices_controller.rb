@@ -46,8 +46,10 @@ class AdvicesController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_advice
-      @advice = Advice.find(params[:id])
+      @advice = current_user.advices.find(params[:id])
     end
+
+    #used to be Advices.find(params[:id])
 
     # def validate_user
     #   set_current_user
