@@ -5,6 +5,6 @@ URL_PATH="/advices"
 curl "${API}${URL_PATH}" \
   --include \
   --request GET \
-  --header "Authorization: Token token=9160e1769f9f1d5a0134865c7e29191b"
+  --header "Authorization: Token token=BAhJIiVkMjllNjVlNDNiMzljNWFhMGZiZThiMzNmYmY3Y2FlYwY6BkVG--ce3e42c572fe82029449bfbb1693fc485b4bcd52"
 
 echo
