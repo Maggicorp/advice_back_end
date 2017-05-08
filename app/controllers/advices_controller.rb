@@ -10,13 +10,6 @@ class AdvicesController < OpenReadController
     render json: @advices
   end
 
-  # DELETE /advices
-#   def destroyall
-#     @advices = current_user.advices
-#     @advices.destroy
-#     head :no_content
-# end
-
   # GET /advices/1
   def show
     render json: @advice

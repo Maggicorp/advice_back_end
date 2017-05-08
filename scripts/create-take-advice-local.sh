@@ -6,11 +6,11 @@ curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
-    --header "Authorization: Token token=BAhJIiVlNGI5NmViMjJiZjY1MDIwYWEwMWVkZWE0OGZmZTgzOQY6BkVG--6a65ffa3e44fdb7f305cca6a46df088a400b1326" \
+    --header "Authorization: Token token=BAhJIiU2ZTVhNjAwYjRlZTI1NzIzZWZmN2RhNmJhNWU0ZTM1MAY6BkVG--b209386c847d54dc7ad4f82cc40017d8af003b35" \
   --data '{
     "take_advice": {
       "yes_or_no": "0",
-      "advice_id": "2"
+      "advice_id": "250"
     }
   }'
 

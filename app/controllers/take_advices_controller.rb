@@ -3,7 +3,8 @@ class TakeAdvicesController < OpenReadController
 
   # GET /take_advices
   def index
-    @take_advices = TakeAdvice.all
+    @take_advices = current_user.take_advices
+    # @take_advices = TakeAdvice.all
 
     render json: @take_advices
   end
@@ -15,7 +16,7 @@ class TakeAdvicesController < OpenReadController
 
   # POST /take_advices
   def create
-    @take_advice = TakeAdvice.create(take_advice_params)
+    @take_advice = current_user.take_advices.build(take_advice_params)
 
     if @take_advice.save
       render json: @take_advice, status: :created, location: @take_advice
