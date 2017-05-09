@@ -1,11 +1,9 @@
 class AdvicesController < OpenReadController
   before_action :set_advice, only: [:show, :update, :destroy]
-  # before_action :validate_user, only: [:index, :create, :update, :destroy, :set_advice]
 
   # GET /advices
   def index
     @advices = current_user.advices
-    # @advices = Advice.all
 
     render json: @advices
   end
@@ -17,11 +15,8 @@ class AdvicesController < OpenReadController
 
   # POST /advices
   def create
-
-    # binding.pry
     @advice = current_user.advices.build(advice_params)
 
-    # binding.pry
     if @advice.save
       render json: @advice, status: :created, location: @advice
     else
@@ -50,16 +45,8 @@ class AdvicesController < OpenReadController
       @advice = current_user.advices.find(params[:id])
     end
 
-    #used to be Advices.find(params[:id])
-
-    # def validate_user
-    #   set_current_user
-    # end
-
     # Only allow a trusted parameter "white list" through.
     def advice_params
       params.require(:advice).permit(:idea)
     end
 end
-
-    # Deletes extra not required advice params params.require(:advice).permit(:idea, :user_id, :updated_at, :created_at)

@@ -1,4 +1,4 @@
-#does not work
+#!/bin/bash
 
 API="${API_ORIGIN:-https://vast-coast-80096.herokuapp.com}"
 URL_PATH="/advices"

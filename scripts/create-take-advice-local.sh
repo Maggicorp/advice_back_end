@@ -1,4 +1,4 @@
-#does not work
+#!/bin/bash
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/take_advices"
