@@ -2,7 +2,7 @@
 Rails.application.routes.draw do
 
   post '/sign-up' => 'users#signup'
-  get '/random' => 'advices#random'
+  # get '/random' => 'advices#random'
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'

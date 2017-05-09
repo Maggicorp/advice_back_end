@@ -5,7 +5,6 @@ class TakeAdvicesController < OpenReadController
   def index
     @take_advices = current_user.take_advices
     # @take_advices = TakeAdvice.all
-
     render json: @take_advices
   end
 
